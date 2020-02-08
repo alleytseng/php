@@ -6,5 +6,7 @@
 		稱謂:<input type="text" name="title">	
 		<input type="submit" name="送出">		
 	</FORM>
-</BODY>	
+</BODY>
 </HTML>
+//methord="get" 缺點: 元件值不能超過100字元, 優點: 參數值會顯示在網址上
+//methord="post" 反之於get
