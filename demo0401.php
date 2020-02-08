@@ -3,7 +3,10 @@
 <BODY>
 <?php
 $my_name = "Alley";
-echo $_GET['somebody'].$_GET['title'].", hello, welocome to {$my_name}'s php program!";
+echo $_REQUEST['somebody'].$_GET['title']
+/*$_POST['title'] 相對於demo0403裡 form 的 methord = post*/
+/*$_REQUEST 是form 的 methord = post 和 get 都能用*/
+.", hello, welocome to {$my_name}'s php program!";
 //phpinfo();
 ?>
 </BODY>
