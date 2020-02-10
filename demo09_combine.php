@@ -37,6 +37,10 @@ function orderform()
 	<input type="hidden" name="op" value="process">
 	用隱藏元件告知op是process
  */
+	include("goods.php");
+	$list="";
+	foreach($goods as $goods_name=>$price)
+		$list.="<input type=\"checkbox\" name=\"goods[]\" value= \"{$goods_name}\">".$goods_name." NT ".$price." 元<br>";
 	$html=<<<FormAlley
 	<html>
 	<head>
@@ -51,12 +55,7 @@ function orderform()
 		請輸入姓名<input type="text" name="username"><br>
 		請輸入郵件<input type="text" name="email"><br>
 		選擇想買的物品<br>
-		<input type="checkbox" name="goods[]" value="12吋 PowerBooK">
-		12吋 PowerBooK NT 56,900 元¸<br>
-		<input type="checkbox" name="goods[]" value="14吋 PowerBooK">
-		14吋 PowerBooK NT 74,900 元¸<br>
-		<input type="checkbox" name="goods[]" value="15吋 PowerBooK">
-		15吋 PowerBooK NT 92,900 元¸<br>
+		$list
 		<input type="hidden" name="op" value="process">
 		<input type="submit" value="­訂購">
 		</form>
