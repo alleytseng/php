@@ -5,11 +5,11 @@ $link=@mysqli_connect("localhost","alley","alley","myweb") or die("無法連上�
 //連接資料庫myweb,帳號密碼都是alley
 $sql="insert into practice (name,sex,birthday,salary) value('donkey','boy','1988-05-22',100000);";
 //插入一筆資料到表單practice的動作存在變數$sql
-if(mysqli_query($link, $sql))//指令mysql執行
+if(mysqli_query($link, $sql))//指令sql執行
 	echo "資料新增完畢<br>";
 
 $sql2="select * from practice";
-$result=mysqli_query($link, $sql2);//指令mysq2執行
+$result=mysqli_query($link, $sql2);//指令sql2執行
 while($data=mysqli_fetch_array($result))//讀出陣列資料
 	echo $data['name']."是".$data['sex'].", 生日是 ".$data['birthday']."<br>";
 
